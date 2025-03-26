@@ -37,7 +37,9 @@ const JobDetails = () => {
                 <Alert severity="error">{error}</Alert>
             ) : (
                 <Box>
-                    <Typography variant="h4" sx={{ mb: 2 }}>Job Details</Typography>
+                    <Typography variant="h4" sx={{ mb: 2, color: "black" }}>
+                        Job Details
+                    </Typography>
                     <Paper sx={{ p: 3, textAlign: "left" }}>
                         <Typography variant="h6"><strong>Title:</strong> {job.job_title}</Typography>
                         <Typography variant="body1" sx={{ mt: 2 }}><strong>Description:</strong></Typography>
