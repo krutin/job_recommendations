@@ -42,17 +42,6 @@ const JobDetails = () => {
                         <Typography variant="h6"><strong>Title:</strong> {job.job_title}</Typography>
                         <Typography variant="body1" sx={{ mt: 2 }}><strong>Description:</strong></Typography>
                         <Typography variant="body2">{job.job_description}</Typography>
-                        <Typography variant="body1" sx={{ mt: 2 }}><strong>Qualifications:</strong></Typography>
-                        <Typography variant="body2">
-                            {Array.isArray(job.job_highlights.Qualifications)
-                                ? job.job_highlights.Qualifications.map((qual, index) => (
-                                    <div key={index}>{qual}</div>
-                                ))
-                                : job.job_highlights.Qualifications.split("\n").map((line, index) => (
-                                    <div key={index}>{line}</div>
-                                ))
-                            }
-                        </Typography>
                         {job.apply_options?.length > 0 && (
                             <Box sx={{ mt: 2 }}>
                                 <Typography variant="body1"><strong>Apply Links:</strong></Typography>
