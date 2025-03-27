@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import ChatIcon from "@mui/icons-material/Chat";
 import { Button, Container, Typography, CircularProgress, Card, CardContent, Box, Alert, TextField } from "@mui/material";
 import "./assets/home.css"
 
@@ -77,6 +78,12 @@ const ResumeUpload = () => {
             <Typography variant="h4" gutterBottom sx={{ color: "black" }}>
                 Upload Your Resume to Find Jobs
             </Typography>
+            <Box sx={{ position: "absolute", top: 20, right: 20 }}>
+    <ChatIcon
+        sx={{ fontSize: 40, cursor: "pointer", color: "#333" }}
+        onClick={() => navigate("/chatbot")}
+    />
+</Box>
 
             <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
                 <input type="file" accept=".pdf,.docx" onChange={handleFileChange} style={{ color: "black", marginBottom: "1rem" }} />

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./index.css";
 import ResumeUpload from "./home.jsx";
 import JobDetails from "./JobDetails.jsx"; 
+import ChatBot from "./chatbot.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -11,6 +12,7 @@ createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<ResumeUpload />} />
         <Route path="/job-details/:jobId" element={<JobDetails />} />
+        <Route path="/chatbot" element={<ChatBot />} />
       </Routes>
     </Router>
   </StrictMode>
